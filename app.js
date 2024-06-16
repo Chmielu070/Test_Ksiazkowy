@@ -1,7 +1,7 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
-let currentUser = null; // Bêdzie przechowywaæ aktualnie zalogowanego u¿ytkownika
+let currentUser = null; // BÄ™dzie przechowywaÄ‡ aktualnie zalogowanego uÅ¼ytkownika
 
-// Dane administratora (prosty przyk³ad, w praktyce nie przechowujemy takich danych w kodzie)
+// Dane administratora (prosty przykÅ‚ad, w praktyce nie przechowujemy takich danych w kodzie)
 const adminCredentials = {
     username: 'admin',
     password: 'admin123'
@@ -15,15 +15,15 @@ function register() {
     if (username && password) {
         const existingUser = users.find(user => user.username === username);
         if (existingUser) {
-            alert('Nazwa u¿ytkownika jest ju¿ zajêta.');
+            alert('Nazwa uÅ¼ytkownika jest juÅ¼ zajÄ™ta.');
         } else {
             users.push({ username, password, books: [] });
             localStorage.setItem('users', JSON.stringify(users));
-            alert('Rejestracja zakoñczona pomyœlnie.');
+            alert('Rejestracja zakoÅ„czona pomyÅ›lnie.');
             showLogin();
         }
     } else {
-        alert('Proszê wprowadziæ nazwê u¿ytkownika i has³o.');
+        alert('ProszÄ™ wprowadziÄ‡ nazwÄ™ uÅ¼ytkownika i hasÅ‚o.');
     }
 }
 
@@ -38,7 +38,7 @@ function login() {
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         window.location.href = 'library.html';
     } else {
-        alert('Niepoprawna nazwa u¿ytkownika lub has³o.');
+        alert('Niepoprawna nazwa uÅ¼ytkownika lub hasÅ‚o.');
     }
 }
 
@@ -50,32 +50,32 @@ function adminLogin() {
     if (username === adminCredentials.username && password === adminCredentials.password) {
         showAdminPanel();
     } else {
-        alert('Niepoprawna nazwa u¿ytkownika lub has³o.');
+        alert('Niepoprawna nazwa uÅ¼ytkownika lub hasÅ‚o.');
     }
 }
 
-// Poka¿ formularz rejestracji
+// PokaÅ¼ formularz rejestracji
 function showRegister() {
     document.getElementById('loginSection').style.display = 'none';
     document.getElementById('registerSection').style.display = 'block';
     document.getElementById('adminSection').style.display = 'none';
 }
 
-// Poka¿ formularz logowania
+// PokaÅ¼ formularz logowania
 function showLogin() {
     document.getElementById('loginSection').style.display = 'block';
     document.getElementById('registerSection').style.display = 'none';
     document.getElementById('adminSection').style.display = 'none';
 }
 
-// Poka¿ formularz logowania administratora
+// PokaÅ¼ formularz logowania administratora
 function showAdmin() {
     document.getElementById('loginSection').style.display = 'none';
     document.getElementById('registerSection').style.display = 'none';
     document.getElementById('adminSection').style.display = 'block';
 }
 
-// Poka¿ panel administratora
+// PokaÅ¼ panel administratora
 function showAdminPanel() {
     document.getElementById('loginSection').style.display = 'none';
     document.getElementById('registerSection').style.display = 'none';
@@ -84,21 +84,21 @@ function showAdminPanel() {
     updateAdminUserList();
 }
 
-// Wyloguj siê
+// Wyloguj siÄ™
 function logout() {
     currentUser = null;
     localStorage.removeItem('currentUser');
     window.location.href = 'index.html';
 }
 
-// Usuñ u¿ytkownika
+// UsuÅ„ uÅ¼ytkownika
 function deleteUser(username) {
     users = users.filter(user => user.username !== username);
     localStorage.setItem('users', JSON.stringify(users));
     updateAdminUserList();
 }
 
-// Zaktualizuj listê u¿ytkowników w panelu administratora
+// Zaktualizuj listÄ™ uÅ¼ytkownikÃ³w w panelu administratora
 function updateAdminUserList() {
     const userList = document.getElementById('userList');
     userList.innerHTML = '';
@@ -106,14 +106,14 @@ function updateAdminUserList() {
         const li = document.createElement('li');
         li.textContent = user.username;
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Usuñ';
+        deleteButton.textContent = 'UsuÅ„';
         deleteButton.onclick = () => deleteUser(user.username);
         li.appendChild(deleteButton);
         userList.appendChild(li);
     });
 }
 
-// Inicjalizacja ksi¹¿ek po za³adowaniu strony biblioteki
+// Inicjalizacja ksiÄ…Å¼ek po zaÅ‚adowaniu strony biblioteki
 window.onload = function () {
     const storedUser = JSON.parse(localStorage.getItem('currentUser'));
     if (storedUser) {
@@ -128,13 +128,13 @@ window.onload = function () {
     }
 }
 
-// Dodaj ksi¹¿kê
+// Dodaj ksiÄ…Å¼kÄ™
 function addBook() {
     const bookTitle = document.getElementById('bookTitle').value;
     if (bookTitle) {
         const existingBook = currentUser.books.find(book => book.title === bookTitle);
         if (existingBook) {
-            alert('Ta ksi¹¿ka jest ju¿ w tabeli.');
+            alert('Ta ksiÄ…Å¼ka jest juÅ¼ w tabeli.');
         } else {
             currentUser.books.push({ title: bookTitle, author: '', genre: '', totalPages: 0, pagesRead: 0 });
             document.getElementById('bookTitle').value = '';
@@ -143,7 +143,7 @@ function addBook() {
     }
 }
 
-// Zaktualizuj ksi¹¿kê
+// Zaktualizuj ksiÄ…Å¼kÄ™
 function updateBook() {
     const targetTitle = document.getElementById('targetTitle').value;
     const author = document.getElementById('author').value;
@@ -159,7 +159,7 @@ function updateBook() {
         if (pagesRead >= 0 && pagesRead <= totalPages) {
             book.pagesRead = pagesRead;
         } else {
-            alert('Iloœæ przeczytanych stron nie mo¿e byæ wiêksza ni¿ iloœæ stron ksi¹¿ki.');
+            alert('IloÅ›Ä‡ przeczytanych stron nie moÅ¼e byÄ‡ wiÄ™ksza niÅ¼ iloÅ›Ä‡ stron ksiÄ…Å¼ki.');
         }
         document.getElementById('targetTitle').value = '';
         document.getElementById('author').value = '';
@@ -168,11 +168,11 @@ function updateBook() {
         document.getElementById('pagesRead').value = '';
         updateTable();
     } else {
-        alert('Ten tytu³ nie znajduje siê w tabeli.');
+        alert('Ten tytuÅ‚ nie znajduje siÄ™ w tabeli.');
     }
 }
 
-// Usuñ ksi¹¿kê
+// UsuÅ„ ksiÄ…Å¼kÄ™
 function deleteBook() {
     const targetTitle = document.getElementById('targetTitle').value;
     currentUser.books = currentUser.books.filter(b => b.title !== targetTitle);
@@ -180,7 +180,7 @@ function deleteBook() {
     updateTable();
 }
 
-// Zaktualizuj tabelê
+// Zaktualizuj tabelÄ™
 function updateTable() {
     const tbody = document.querySelector('#bookTable tbody');
     tbody.innerHTML = '';
@@ -200,22 +200,22 @@ function updateTable() {
     localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Poka¿ szczegó³y u¿ytkownika
+// PokaÅ¼ szczegÃ³Å‚y uÅ¼ytkownika
 function showDetails() {
     window.location.href = 'details.html';
 }
 
-// Pobierz nag³ówek
+// Pobierz nagÅ‚Ã³wek
 var header = document.querySelector('header');
 
-// ŒledŸ przewijanie strony
+// ÅšledÅº przewijanie strony
 window.addEventListener('scroll', function () {
-    // Jeœli przewiniêcie strony jest wiêksze ni¿ 50px
+    // JeÅ›li przewiniÄ™cie strony jest wiÄ™ksze niÅ¼ 50px
     if (window.scrollY > 50) {
-        // Dodaj klasê "small" do nag³ówka
+        // Dodaj klasÄ™ "small" do nagÅ‚Ã³wka
         header.classList.add('small');
     } else {
-        // W przeciwnym razie usuñ klasê "small"
+        // W przeciwnym razie usuÅ„ klasÄ™ "small"
         header.classList.remove('small');
     }
 });
