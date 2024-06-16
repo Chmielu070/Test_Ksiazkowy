@@ -30,14 +30,14 @@ header {
     align-items: flex-start;
     margin-top: 200px;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1300px;
     height: 600px;
 }
 
 #app {
     display: flex;
     justify-content: space-between;
-    background: white;
+    background-color: #CFCFCF;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -47,6 +47,7 @@ header {
 
 #bookForm, #bookTableContainer {
     width: 48%;
+
 }
 
 #bookForm {
@@ -55,11 +56,22 @@ header {
     gap: 10px;
 }
 
+#logoImage {
+    width: 50px;
+    height: auto;
+    margin-right: 500px;
+}
+
+
 h1 {
     margin-top: 0;
     text-align: center;
 }
-
+.centered-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
 label {
     display: block;
     margin-bottom: 5px;
@@ -118,7 +130,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 3px solid #808080;
     padding: 8px;
     text-align: left;
 }

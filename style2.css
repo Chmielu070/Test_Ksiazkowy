@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 140vh;
     background-color: #f5f5dc;
     flex-direction: column;
 }
@@ -34,10 +34,10 @@ header {
 #app {
     background: white;
     padding: 20px;
-    margin-top: 200px;
+    margin-top: 150px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 700px;
+    height: 650px;
     width: 700px;
     max-width: 700px;
     display: flex;
@@ -58,7 +58,7 @@ canvas#genreChart {
     max-width: 400px; /* maksymalna szerokość wykresu */
     width: 90%; /* szerokość wykresu */
     height: 90%; /* stała wysokość wykresu */
-    margin-top: 5px; /* margines na górze */
+    margin-top: 1   px; /* margines na górze */
 }
 
 

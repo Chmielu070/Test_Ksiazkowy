@@ -9,18 +9,21 @@
 <body>
     <header>
         Book Tracker
-                <button id="logoutButton" onclick="logout()">Wyloguj</button>
+        <button id="logoutButton" onclick="logout()">Wyloguj</button>
     </header>
     <div id="container">
         <div id="app">
             <div id="bookForm">
                 <button id="logoutButton" onclick="logout()">Wyloguj</button>
+                <div class="centered-text">Statystyki </div>
                 <button id="detailsButton" onclick="showDetails()">Szczegóły Użytkownika</button>
+                <div class="centered-text">Dodaj Książkę</div>
                 <div>
                     <label for="bookTitle">Podaj tytuł:</label>
                     <input type="text" id="bookTitle">
                     <button onclick="addBook()">Zatwierdź</button>
                 </div>
+                <div class="centered-text">Edytuj Książkę</div>
                 <div>
                     <label for="targetTitle">Podaj tytuł:</label>
                     <input type="text" id="targetTitle">
@@ -47,6 +50,7 @@
                 </div>
             </div>
             <div id="bookTableContainer">
+                <div class="centered-text">Lista Książek</div>
                 <table id="bookTable">
                     <thead>
                         <tr>
