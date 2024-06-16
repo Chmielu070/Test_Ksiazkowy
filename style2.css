@@ -9,26 +9,6 @@
     background-color: #f5f5dc;
     flex-direction: column;
 }
-header {
-    background-color: #ff3333;
-    width: 100%;
-    padding: 35px 0;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-
-    header.small {
-        padding: 15px 0;
-        font-size: 15px;
-    }
 
 #app {
     background: white;
