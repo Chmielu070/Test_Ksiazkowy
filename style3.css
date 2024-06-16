@@ -9,6 +9,7 @@ body {
     background-color: #f5f5dc;
     flex-direction: column;
 }
+
 header {
     background-color: #ff3333;
     width: 100%;
@@ -26,92 +27,32 @@ header {
 
 #container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 200px;
+    width: 90%;
+    max-width: 1200px;
+    height: 600px;
 }
-
-/* button*/
-.btn {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: #FF3359;
-    width: 160px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
-}
-
-    .btn:hover, .btn:focus, .btn:active {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
 
 #app {
+    display: flex;
+    justify-content: space-between;
     background: white;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 400px;
-    
-}
-
-
-{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5dc;
-    flex-direction: column;
-}
-
-header {
-    background-color: #ff3333;
     width: 100%;
-    padding: 35px 0;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    gap: 20px;
 }
 
-#container {
+#bookForm, #bookTableContainer {
+    width: 48%;
+}
+
+#bookForm {
     display: flex;
-    align-items: center;
-    margin-top: 80px;
-}
-
-#bookImage {
-    width: 500px;
-    height: auto;
-    margin-right: 320px;
-}
-
-#app {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 h1 {
@@ -125,6 +66,7 @@ label {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -151,85 +93,22 @@ button {
         background-color: #e62e50;
     }
 
-#loginSection, #registerSection, #adminSection, #adminPanel {
-    display: none;
-}
-
-    #loginSection.active, #registerSection.active, #adminSection.active, #adminPanel.active {
-        display: block;
-    }
-
-.div1 {
-    width: 100%;
-}
-
-.div2 {
-    width: 100%;
-    text-align: center;
-}
-
-.btn {
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: #FF3359;
-    width: 160px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
-    transition-duration: 0.3s;
-    transition-property: box-shadow, transform;
-}
-
-    .btn:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
-    }
-0px;
-    border-radius: 8px;
-    box-shadow: 0 0 110px rgba(0,0,0,0.1);
-    width: 1000px;
-    max-width: 300px;
-    margin: 20px auto;
-    position: relative;
-}
-
-h1 {
-    margin-top: 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
+#logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    background-color: #FF3359;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header.small {
+    padding: 15px 0;
+    font-size: 15px;
 }
 
 table {
@@ -250,46 +129,14 @@ th {
 
 #logoutButton {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 20px;
     padding: 10px 20px;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-#registerSection {
-    margin-top: 20px;
-}
-
-.input-container {
-    width: 50%;
-    box-sizing: border-box;
-    padding-right: 10px;
-}
-
-    .input-container input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-    }
-
-.div1 {
-    width: 50%;
-    float: left;
-}
-
-.div2 {
-    width: 50%;
-    float: right;
+    background-color: #fff;
+    color: #ff3333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
 }

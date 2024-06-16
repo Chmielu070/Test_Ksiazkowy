@@ -204,3 +204,18 @@ function updateTable() {
 function showDetails() {
     window.location.href = 'details.html';
 }
+
+// Pobierz nag³ówek
+var header = document.querySelector('header');
+
+// ŒledŸ przewijanie strony
+window.addEventListener('scroll', function () {
+    // Jeœli przewiniêcie strony jest wiêksze ni¿ 50px
+    if (window.scrollY > 50) {
+        // Dodaj klasê "small" do nag³ówka
+        header.classList.add('small');
+    } else {
+        // W przeciwnym razie usuñ klasê "small"
+        header.classList.remove('small');
+    }
+});

@@ -38,3 +38,8 @@ canvas#genreChart {
     height: 100%; /* stała wysokość wykresu */
     margin-top: 5px; /* margines na górze */
 }
+
+header.small {
+    padding: 10px 0;
+    font-size: 15px;
+}
