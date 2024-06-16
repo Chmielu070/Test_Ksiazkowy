@@ -32,6 +32,11 @@
             window.location.href = 'library.html';
         }
 
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
         function renderChart(data) {
             const ctx = document.getElementById('genreChart').getContext('2d');
             new Chart(ctx, {
