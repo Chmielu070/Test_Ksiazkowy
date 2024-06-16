@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szczegó³y U¿ytkownika</title>
+    <title>SzczegÃ³Å‚y UÅ¼ytkownika</title>
     <link rel="stylesheet" href="style2.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
     <div id="app">
-        <button onclick="goBack()">Wróæ</button>
-        <h1>Szczegó³y U¿ytkownika</h1>
+        <button onclick="goBack()">WrÃ³Ä‡</button>
+        <h1>SzczegÃ³Å‚y UÅ¼ytkownika</h1>
         <h2 id="username"></h2>
         <canvas id="genreChart"></canvas>
     </div>
@@ -49,7 +49,7 @@
             const storedUser = JSON.parse(localStorage.getItem('currentUser'));
             if (storedUser)
 	    {
-                document.getElementById('username').textContent = `Nazwa u¿ytkownika: ${storedUser.username}`;
+                document.getElementById('username').textContent = `Nazwa uÅ¼ytkownika: ${storedUser.username}`;
                 const genreCount = {};
                 storedUser.books.forEach(book =>
 		{
