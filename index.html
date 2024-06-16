@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Deklaracja kodowania -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tracker App</title>
     <link rel="stylesheet" href="style.css">
@@ -15,48 +15,48 @@
         <div id="app">
             <div id="loginSection" class="active">
                 <div class="div1">
-                    <h2>Zaloguj siê</h2>
-                    <label for="loginUsername">Nazwa u¿ytkownika:</label>
+                    <h2>Zaloguj się</h2>
+                    <label for="loginUsername">Nazwa użytkownika:</label>
                     <input type="text" id="loginUsername">
-                    <label for="loginPassword">Has³o:</label>
+                    <label for="loginPassword">Hasło:</label>
                     <input type="password" id="loginPassword">
                 </div>
                 <div class="div2">
                     <a href="#" class="btn" onclick="login()">Zaloguj</a>
-                    <a href="#" class="btn" onclick="showRegister()">Zarejestruj siê</a>
+                    <a href="#" class="btn" onclick="showRegister()">Zarejestruj się</a>
                     <a href="#" class="btn" onclick="showAdmin()">Panel administratora</a>
                 </div>
             </div>
             <div id="registerSection">
-                <h2>Zarejestruj siê</h2>
+                <h2>Zarejestruj się</h2>
                 <div>
-                    <label for="registerUsername">Nazwa u¿ytkownika:</label>
+                    <label for="registerUsername">Nazwa użytkownika:</label>
                     <input type="text" id="registerUsername">
                 </div>
                 <div>
-                    <label for="registerPassword">Has³o:</label>
+                    <label for="registerPassword">Hasło:</label>
                     <input type="password" id="registerPassword">
                 </div>
                 <button onclick="register()">Zarejestruj</button>
-                <button onclick="showLogin()">Wróæ do logowania</button>
+                <button onclick="showLogin()">Wróć do logowania</button>
             </div>
             <div id="adminSection">
-                <h2>Admin Panel</h2>
+                <h2>Panel Administratora</h2>
                 <div>
                     <label for="adminUsername">Nazwa administratora:</label>
                     <input type="text" id="adminUsername">
                 </div>
                 <div>
-                    <label for="adminPassword">Has³o administratora:</label>
+                    <label for="adminPassword">Hasło administratora:</label>
                     <input type="password" id="adminPassword">
                 </div>
                 <button onclick="adminLogin()">Zaloguj jako Administrator</button>
-                <button onclick="showLogin()">Wróæ do logowania</button>
+                <button onclick="showLogin()">Wróć do logowania</button>
             </div>
             <div id="adminPanel">
-                <h2>Admin Panel</h2>
+                <h2>Panel Administratora</h2>
                 <ul id="userList">
-                    <!-- Lista u¿ytkowników bêdzie tutaj -->
+                    <!-- Lista użytkowników będzie tutaj -->
                 </ul>
                 <button onclick="logout()">Wyloguj</button>
             </div>
