@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ff3333;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#bookImage {
+    width: 500px;
+    height: auto;
+    margin-right: 320px;
+}
+
+#app {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    background-color: #FF3359;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #e62e50;
+    }
+
+#loginSection, #registerSection, #adminSection, #adminPanel {
+    display: none;
+}
+
+    #loginSection.active, #registerSection.active, #adminSection.active, #adminPanel.active {
+        display: block;
+    }
+
+.div1 {
+    width: 100%;
+}
+
+.div2 {
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #FF3359;
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+    .btn:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+    }
